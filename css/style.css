@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: url(https://scripts.sil.org/OFL);
+}
+.header{
+    background-color: #ffffff;
+}
+.blocks{
+    display: flex;
+    flex-wrap: wrap;
+}
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.page li{
+    list-style: none;
+}
+.page a{
+    color:rgb(1, 70, 55);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.cooperate1{
+    background: #014637;
+    padding: 3px 6px;
+    
+}
+.cooperate2{
+    border: 1px solid #FFF;
+    padding: 22px 33px;
+}
+.phone{
+    display: flex;
+    flex-wrap: wrap;
+}
+
