@@ -2,39 +2,103 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: url(https://scripts.sil.org/OFL);
+}
+html, body{
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.menu{
+    background-color: #ffffff;
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: normal;
+}
+.container{
+    max-width: 1440px;
+    padding: 0px;
+    margin: 0 auto;
+}
+.menu__inner{
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .header{
-    background-color: #ffffff;
-}
-.blocks{
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+}
+.header-left{
+    gap: 149px;
+}
+.header-right{
+    gap: 50px;
 }
 .page{
     display: flex;
-    flex-wrap: wrap;
+    list-style: none;
     gap: 60px;
 }
-.page li{
-    list-style: none;
-}
-.page a{
+.page li a{
+    text-transform: uppercase;
     color:rgb(1, 70, 55);
     text-decoration: none;
-    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
 }
-.cooperate1{
-    background: #014637;
-    padding: 3px 6px;
-    
-}
-.cooperate2{
-    border: 1px solid #FFF;
-    padding: 22px 33px;
-}
-.phone{
+.kontakt_header {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-left: 50px;
 }
-
+.phone {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 3px; 
+}
+.email_header {
+    color:rgb(1, 70, 55);
+    text-align: right; 
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%; 
+}
+.phone_header{
+    color:rgb(1, 70, 55);
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.custom-button {
+    display: inline-block;
+    position: relative; 
+    padding: 26px 39px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFF;
+    border: 1px solid transparent; 
+    background: #014637;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.custom-button::before {
+    content: ''; 
+    position: absolute;
+    inset: 3px 5px;
+    border: 1px solid #FFF; 
+    pointer-events: none; 
+    transition: border-color 0.3s ease; 
+}
+.custom-button:hover {
+    background-color: #FFF; 
+    color: #014637; 
+    border: 1px solid #014637; 
+}
+.custom-button:hover::before {
+    border-color: #014637; 
+}
