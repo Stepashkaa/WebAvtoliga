@@ -37,6 +37,9 @@ h1,h2,h3,h4,h5,h6{
 .header-right{
     gap: 50px;
 }
+.logo{
+    margin-left: 51px;
+}
 .page{
     display: flex;
     list-style: none;
@@ -73,6 +76,9 @@ h1,h2,h3,h4,h5,h6{
     font-size: 20px;
     font-weight: 600;
 }
+.button_cooperate{
+    margin-right: 51px;
+}
 .custom-button {
     display: inline-block;
     position: relative; 
@@ -101,4 +107,19 @@ h1,h2,h3,h4,h5,h6{
 }
 .custom-button:hover::before {
     border-color: #014637; 
+}
+
+.block_reliable_supplier {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), /* Полупрозрачный слой */
+        url(../img/UAZ_fon11.png); /* Основной фон */
+    background-size: cover;
+    min-height: 1100px;
+    background-repeat: no-repeat;
+}
+
+.green_block {
+    max-width: 800px;
+    min-height: 1100px;
+    background: rgba(1, 70, 55, 0.55);
 }
