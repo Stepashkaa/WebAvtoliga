@@ -34,13 +34,10 @@ h1,h2,h3,h4,h5,h6{
     align-items: center;
 }
 .header-left{
-    gap: 149px;
+    gap: 129px;
 }
 .header-right{
     gap: 50px;
-}
-.logo{
-    margin-left: 51px;
 }
 .page{
     display: flex;
@@ -78,9 +75,6 @@ h1,h2,h3,h4,h5,h6{
     font-size: 20px;
     font-weight: 600;
 }
-.button_cooperate{
-    margin-right: 51px;
-}
 .custom-button {
     display: inline-block;
     position: relative; 
@@ -115,49 +109,44 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Inter';
     font-style: normal;
     color: #FFF;
-    min-height: 1200px;
-}
-.block_reliable_supplier{
-    background: url(../img/UAZ_fon2.png); /* Основной фон */
+    background-image: url(../img/UAZ_fon3.png); /* Основной фон */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    min-height: 1200px;
+    height: 1100px;
 }
-
-/* .green_block {
-    position: relative; 
-    top: 0;
-    left: 0;
-    width: 900px; 
-    height: 800px;
-    background-color: rgba(1, 70, 55, 0.55); /* Полупрозрачный зеленый фон
-} */
+.reliable_text{
+    padding: 75px 0 0 136px;
+}
 
 .avtoliga {
     font-family: 'BOWLER';
-    font-size: 60px;
+    font-size: 75px;
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
-    padding: 117px 30px 0 196px;
+    padding: 180px 0 0 136px;
 }
 .reliable_supplier_text {
     color: #FFF;
-    font-size: 55px;
+    font-size: 65px;
     font-weight: 700;
-    line-height: 85px;
+    line-height: 125px;
     text-transform: uppercase;
-    padding: 117px 30px 0 196px;
 }
 .original_parts {
     color: #FFF;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 40px; 
+    padding: 100px 0 0 136px;
+    max-width: 800px;
+}
+.reliable_supplier .button_cooperate{
+    padding: 110px 0 0 164px;
 }
 
 .more{
-    padding: 23px 69px;
+    padding: 23px 109px;
     color: #014637;
     background: #FFF;
 }
