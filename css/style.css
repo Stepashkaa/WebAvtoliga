@@ -191,7 +191,6 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
 }
-
 /* Основной стиль */
 .ticker{
     padding: 150px 0 116px 0;
@@ -209,7 +208,7 @@ h1,h2,h3,h4,h5,h6{
     
   }
 
-  .avtoliga_ticker1 {
+.avtoliga_ticker1 {
     animation: marquee1 60s infinite linear;
     animation-delay: -60s;
 }
