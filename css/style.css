@@ -5,6 +5,7 @@
 }
 html, body{
     overflow-x: hidden;
+    /* scroll-behavior: smooth;*/ /*Плавная прокрутка */
 }
 h1,h2,h3,h4,h5,h6{
     margin-top: 0;
@@ -20,8 +21,6 @@ h1,h2,h3,h4,h5,h6{
     max-width: 1440px;
     padding: 0px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
 }
 .menu__inner{
     margin: 10px 0px;
@@ -104,6 +103,7 @@ h1,h2,h3,h4,h5,h6{
 .custom-button:hover::before {
     border-color: #014637; 
 }
+
 /*Надёжный поставщик*/
 .reliable_supplier{
     font-family: 'Inter';
@@ -112,12 +112,11 @@ h1,h2,h3,h4,h5,h6{
     background-image: url(../img/UAZ_fon3.png); /* Основной фон */
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1100px;
+    height: 1200px;
 }
 .reliable_text{
     padding: 75px 0 0 136px;
 }
-
 .avtoliga {
     font-family: 'BOWLER';
     font-size: 75px;
@@ -144,7 +143,6 @@ h1,h2,h3,h4,h5,h6{
 .reliable_supplier .button_cooperate{
     padding: 110px 0 0 164px;
 }
-
 .more{
     padding: 23px 109px;
     color: #014637;
@@ -162,7 +160,7 @@ h1,h2,h3,h4,h5,h6{
     border-color: #FFF; 
 } 
 
-
+/*О нас*/
 .about_us{
     font-style: normal;
     line-height: normal;
@@ -170,7 +168,7 @@ h1,h2,h3,h4,h5,h6{
     background-size: cover;
     background-repeat: no-repeat;
 }
-.title{
+.title_text{
     color: #014637;
     font-family: 'BOWLER';
     font-size: 70px;
@@ -191,8 +189,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
 }
-/* Основной стиль */
-.ticker{
+.ticker{ /*бегкщая строка*/
     padding: 150px 0 116px 0;
 }
 .scrolling-text {
@@ -204,21 +201,16 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 400;
     text-transform: uppercase;
     color: transparent; /* Делаем текст прозрачным */
-    -webkit-text-stroke: 1px #014637;
-    
-  }
-
+    -webkit-text-stroke: 1px #014637; 
+}
 .avtoliga_ticker1 {
     animation: marquee1 60s infinite linear;
     animation-delay: -60s;
 }
-
 .avtoliga_ticker2 {
     animation: marquee2 60s infinite linear;
     animation-delay: -30s;
 }
-  
-  
 @keyframes marquee1 {
     0% {
         transform: translateX(100%);
@@ -227,7 +219,6 @@ h1,h2,h3,h4,h5,h6{
         transform: translateX(-100%);
     }
 }
-
 @keyframes marquee2 {
     0% {
         transform: translateX(0%);
@@ -236,3 +227,135 @@ h1,h2,h3,h4,h5,h6{
         transform: translateX(-200%);
     }
 }
+
+/*Наши преимущества*/
+.title_our_advantages{
+    color: #014637;
+    font-family: 'BOWLER';
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 71px 0 0 146px;
+}
+.title_our_advantages2{
+    padding-top: 10px;
+}
+.advantages {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Расстояние между секциями */
+    margin: 99px 0 150px 0;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 3px solid #2c524a; /* Вертикальная линия */
+    padding-left: 50px; /* Отступ от линии */
+    font-style: normal;
+    line-height: normal;
+}
+.section_book{
+    padding-left: 0px;
+}
+.icon_section img {
+    margin-bottom: 40px;
+}
+.title_section {
+    color: #014637;
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.text_section {
+    color: #014637;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 300;
+    max-width: 340px;
+}
+.section_book .text_section{
+    max-width: 339px;
+}
+.advantages .section:first-child {
+    border-left: none; /* Убираем левую границу у первой секции */
+}
+
+/*Обсудите свои вопросы*/
+/* .discuss_your_questions{
+    background-image: url(../img/UAZ_fon_publicity2.png); 
+    width: 100%;
+    background-repeat: no-repeat;
+    min-height: 1300px;
+} */
+
+.discuss_image{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.discuss_your_questions .container{
+    position: relative;
+    z-index: 3;
+}
+
+.discuss{
+    display: flex;
+    justify-content: center;
+    gap: 74px;
+    font-style: normal;
+    line-height: normal;
+    padding-top: 249px;
+    align-items: center;
+}
+
+.discuss_title{
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 45px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.questions2{
+    font-size: 32px;
+    padding-top: 15px;
+}
+.discuss_text{
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: 400;
+    width: 438px;
+    padding-top: 45px;
+}
+.online{
+    font-size: 18px;
+    width: 451px;
+}
+ 
+.discuss_your_questions .button_discuss{
+    padding-top: 45px;
+} 
+.discuss_button{
+    padding: 26px 16px;
+    color: #014637;
+    background: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+}
+.discuss_button::before {
+    border: 1px solid #014637; 
+}
+.discuss_button:hover {
+    background-color: #014637; 
+    color: #FFF; 
+    border: 1px solid #FFF; 
+}
+.discuss_button:hover::before {
+    border-color: #FFF; 
+} 
