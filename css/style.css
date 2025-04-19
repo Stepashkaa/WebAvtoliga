@@ -5,7 +5,7 @@
 }
 html, body{
     overflow-x: hidden;
-    /* scroll-behavior: smooth;*/ /*Плавная прокрутка */
+    scroll-behavior: smooth; /*Плавная прокрутка */
 }
 h1,h2,h3,h4,h5,h6{
     margin-top: 0;
@@ -106,16 +106,19 @@ h1,h2,h3,h4,h5,h6{
 
 /*Надёжный поставщик*/
 .reliable_supplier{
+    background-image: url(../img/UAZ_fon_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 1200px;
+}
+.reliable_supplier .container{
     font-family: 'Inter';
     font-style: normal;
     color: #FFF;
-    background-image: url(../img/UAZ_fon3.png); /* Основной фон */
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 1200px;
 }
 .reliable_text{
-    padding: 75px 0 0 136px;
+    padding: 55px 0 0 136px;
 }
 .avtoliga {
     font-family: 'BOWLER';
@@ -162,11 +165,12 @@ h1,h2,h3,h4,h5,h6{
 
 /*О нас*/
 .about_us{
+    background-image: url(../img/About_us_fon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-style: normal;
     line-height: normal;
-    background-image: url(../img/About_us_fon.png); /* Основной фон */
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 .title_text{
     color: #014637;
@@ -189,18 +193,20 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
 }
-.ticker{ /*бегкщая строка*/
+.ticker{ 
+    position: relative;
+    z-index: 2;
     padding: 150px 0 116px 0;
 }
 .scrolling-text {
     display: flex;
-    overflow: hidden; /* Убираем прокрутку */
-    white-space: nowrap; /* Запрещаем перенос текста */
+    overflow: hidden;
+    white-space: nowrap; 
     font-family: 'BOWLER', sans-serif;
     font-size: 90px;
     font-weight: 400;
     text-transform: uppercase;
-    color: transparent; /* Делаем текст прозрачным */
+    color: transparent; 
     -webkit-text-stroke: 1px #014637; 
 }
 .avtoliga_ticker1 {
@@ -229,7 +235,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /*Наши преимущества*/
-.title_our_advantages{
+.title_header{
     color: #014637;
     font-family: 'BOWLER';
     font-size: 60px;
@@ -239,21 +245,21 @@ h1,h2,h3,h4,h5,h6{
     text-transform: uppercase;
     padding: 71px 0 0 146px;
 }
-.title_our_advantages2{
+.title_header2{
     padding-top: 10px;
 }
 .advantages {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Расстояние между секциями */
+    gap: 50px; 
     margin: 99px 0 150px 0;
 }
 .section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 3px solid #2c524a; /* Вертикальная линия */
-    padding-left: 50px; /* Отступ от линии */
+    border-left: 3px solid #2c524a; 
+    padding-left: 50px; 
     font-style: normal;
     line-height: normal;
 }
@@ -283,69 +289,57 @@ h1,h2,h3,h4,h5,h6{
     max-width: 339px;
 }
 .advantages .section:first-child {
-    border-left: none; /* Убираем левую границу у первой секции */
+    border-left: none; 
 }
-
 /*Обсудите свои вопросы*/
-/* .discuss_your_questions{
-    background-image: url(../img/UAZ_fon_publicity2.png); 
-    width: 100%;
+.discuss_your_questions{
+    background-image: url(../img/UAZ_fon_publicity.png);
     background-repeat: no-repeat;
-    min-height: 1300px;
-} */
-
-.discuss_image{
-    width: 100%;
-    position: absolute;
-    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    min-height: 1100px;
 }
-.discuss_your_questions .container{
-    position: relative;
-    z-index: 3;
-}
-
 .discuss{
     display: flex;
     justify-content: center;
     gap: 74px;
     font-style: normal;
     line-height: normal;
-    padding-top: 249px;
+    padding-top: 229px;
     align-items: center;
 }
 
 .discuss_title{
     color: #FFF;
     font-family: 'Inter';
-    font-size: 45px;
+    font-size: 55px;
     font-weight: 800;
     text-transform: uppercase;
 }
 .questions2{
-    font-size: 32px;
+    font-size: 42px;
     padding-top: 15px;
 }
 .discuss_text{
     color: #FFF;
     font-family: 'Inter';
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 400;
-    width: 438px;
-    padding-top: 45px;
+    width: 520px;
+    padding-top: 65px;
 }
 .online{
-    font-size: 18px;
-    width: 451px;
+    font-size: 22px;
+    width: 561px;
 }
- 
 .discuss_your_questions .button_discuss{
-    padding-top: 45px;
+    padding-top: 65px;
 } 
 .discuss_button{
-    padding: 26px 16px;
+    padding: 26px 26px;
     color: #014637;
     background: #FFF;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
 }
 .discuss_button::before {
@@ -358,4 +352,480 @@ h1,h2,h3,h4,h5,h6{
 }
 .discuss_button:hover::before {
     border-color: #FFF; 
+}
+.gears2 {
+    position: absolute;
+    right: 15%;
+    top: 397%;
+}
+
+/*Способы доставки*/
+.delivery-methods {
+    font-style: normal;
+    line-height: normal;
+}
+.methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px 0 161px 0;
+}
+.method {
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    
+}
+.method-title {
+    color: #014637;
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    align-self: center;
+    margin-bottom: 25px;
+}
+.method-icon {
+    margin: 0 auto 20px;
+}
+.method-description {
+    color: #014637;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 300;
+    width: 320px;
+    margin-bottom: 75px;
+}
+/*Наши запчасти*/
+/* .our_spares{
+    background-image: url(../img/spares.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}  */
+
+.our_spares {
+    background-image: url(../img/spares.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.uazik {
+    position: relative;
+    text-align: center;
+    font-style: normal;
+    line-height: normal;
+}
+.part {
+    position: absolute;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+.part_icon{
+    margin: 10px 0;
+}
+.title_part_text{
+    color: #014637;
+    font-family: 'Inter';
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.part_text{
+    color: #014637;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 330px;
+}
+
+.connector {
+    position: relative;
+    width: 100px;
+    height: 2px;
+    background-color: #333;
+    transform: rotate(-45deg);
+    margin: 100px auto; /* Для центрирования */
+}
+
+.line {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #333;
+}
+
+.line-1 {
+    top: 50%;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.line-2 {
+    top: 50%;
+    right: 0;
+    transform: rotate(45deg);
+}
+.engine {
+    top: 20%;
+    left: 10%;
+}
+
+/* .electricity {
+    top: 30%;
+    left: 10%;
+}
+
+.body {
+    top: 20%;
+    right: 20%;
+}
+
+.brakes {
+    bottom: 20%;
+    right: 20%;
+}
+
+.suspension {
+    bottom: 30%;
+    left: 10%;
+}
+
+.transmission {
+    bottom: 10%;
+    left: 20%;
+} */
+
+/* Connector lines */
+.engine .connector {
+    top: -50px;
+    left: 50%;
+}
+
+/* .electricity .connector {
+    top: -50px;
+    left: 50%;
+}
+
+.body .connector {
+    top: 50px;
+    right: 50%;
+}
+
+.brakes .connector {
+    bottom: 50px;
+    right: 50%;
+}
+
+.suspension .connector {
+    bottom: -50px;
+    left: 50%;
+}
+
+.transmission .connector {
+    bottom: -50px;
+    left: 50%;
+} */
+
+
+/*Получите персональную подборку запчастей*/
+.spare_parts_selection{
+    background-image: url(../img/UAZ_Spare_Parts_Selection.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 1100px;
+    position: relative;
+}
+.spare_parts{
+    font-style: normal;
+    line-height: normal;
+    padding-top: 150px;
+    padding-left: 115px;
+}
+
+.spare_parts_title{
+    color: #014637;
+    font-family: 'Inter';
+    font-size: 45px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.questions2{
+    padding-top: 10px;
+}
+.spare_parts_text{
+    color: #014637;
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: 400;
+    width: 650px;
+    padding-top: 50px;
+}
+.spare_parts_right{
+    background-color: #fff;
+    border-radius: 50px; 
+    padding: 53px 33px; 
+    max-width: 750px; 
+}
+.spare_parts_selection .button_spare_parts{
+    padding-top: 65px;
+    text-align: center;
 } 
+.spare_parts_button{
+    padding: 26px 26px;
+    color: #FFF;
+    background: #014637;
+    font-size: 20px;
+    font-weight: 400;
+}
+.spare_parts_button::before {
+    border: 1px solid #FFF; 
+}
+.spare_parts_button:hover {
+    background-color: #FFF; 
+    color: #014637; 
+    border: 1px solid #014637; 
+}
+.spare_parts_button:hover::before {
+    border-color: #014637; 
+}
+
+/*Контакты*/
+.contact_block{
+    background-image: url(../img/Map.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.contacts_info{
+    padding: 200px 0 119px 126px;
+}
+.contact_phone_email{
+    padding-top: 40px;
+}
+.contact_phone_email .email{
+    padding-top: 15px;
+}
+.contact{
+    font-style: normal;
+    line-height: normal;
+    background: #014637;
+    max-width: 550px;
+    padding: 49px 0 97px 73px;
+}
+.contact_title{
+    color: #FFF;
+    font-family: 'BOWLER';
+    font-size: 60px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.contact_text{
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: 300;
+}
+.contact_text_title{
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: 800;
+    padding-top: 60px;
+}
+.adress{
+    padding-top: 30px;
+}
+
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #014637;
+}
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Разбиваем контейнер на 4 колонки */
+    gap: 40px;
+    /* max-width: 1200px; */
+    font-style: normal;
+    line-height: normal;
+}
+.footer .menu {
+    background-color: #014637;
+}
+.footer .menu ul {
+    list-style: none;
+}
+.footer .menu li {
+    margin-bottom: 30px;
+}
+.footer .menu a {
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.contact-info .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.contact-info img {
+    margin-right: 25px;
+}
+.contact_info_phone{
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.contact_info_text{
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 23px;
+}
+.social-icons {
+    display: flex;
+    gap: 25px; 
+}
+.contact_button{
+    padding: 17px 72px;
+    color: #014637;
+    background: #FFF;
+    font-size: 15px;
+    font-weight: 400;
+}
+.contact_button::before {
+    border: 1px solid #014637; 
+}
+.contact_button:hover {
+    background-color: #014637; 
+    color: #FFF; 
+    border: 1px solid #FFF; 
+}
+.contact_button:hover::before {
+    border-color: #FFF; 
+}
+
+/* Всплывающее окно */
+.modal {
+    display: none; /* Скрыт по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Форма */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #0d4726;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #0b3e1c;
+}
+
+/* Сообщение об успешной отправке */
+.success-message {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.success-message .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
