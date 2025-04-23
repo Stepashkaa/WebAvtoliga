@@ -35,10 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Проверяем обязательные поля
         const name = document.getElementById("name").value.trim();
         const surname = document.getElementById("surname").value.trim();
-        const birthdate = document.getElementById("birthdate").value.trim();
         const email = document.getElementById("email").value.trim();
 
-        if (!name || !surname || !birthdate || !email) {
+        if (!name || !surname || !email) {
             alert("Пожалуйста, заполните все обязательные поля.");
             return;
         }

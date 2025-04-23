@@ -106,7 +106,7 @@ h1,h2,h3,h4,h5,h6{
 
 /*Надёжный поставщик*/
 .reliable_supplier{
-    background-image: url(../img/UAZ_fon_1.png);
+    background-image: url(../img/fon/UAZ_fon_1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -163,9 +163,45 @@ h1,h2,h3,h4,h5,h6{
     border-color: #FFF; 
 } 
 
+/*мышка*/
+.cont{
+    position:relative;
+    top:175px;
+}
+.mouse {
+    border: 2px solid #FFF;
+    border-radius: 13px;
+    height: 44px;
+    margin: 0 auto;
+    width: 28px;
+}
+.mouse span {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+    background: none repeat scroll 0 0 #FFF;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: block;
+    height: 6px;
+    margin: 6px auto;
+    width: 2px;
+}
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
 /*О нас*/
 .about_us{
-    background-image: url(../img/About_us_fon.png);
+    background-image: url(../img/fon/About_us_fon.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -202,7 +238,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     overflow: hidden;
     white-space: nowrap; 
-    font-family: 'BOWLER', sans-serif;
+    font-family: 'BOWLER';
     font-size: 90px;
     font-weight: 400;
     text-transform: uppercase;
@@ -293,7 +329,7 @@ h1,h2,h3,h4,h5,h6{
 }
 /*Обсудите свои вопросы*/
 .discuss_your_questions{
-    background-image: url(../img/UAZ_fon_publicity.png);
+    background-image: url(../img/fon/UAZ_fon_publicity.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -401,15 +437,9 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 75px;
 }
 /*Наши запчасти*/
-/* .our_spares{
-    background-image: url(../img/spares.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-}  */
 
 .our_spares {
-    background-image: url(../img/spares.png);
+    background-image: url(../img/fon/spares.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -445,98 +475,44 @@ h1,h2,h3,h4,h5,h6{
     max-width: 330px;
 }
 
-.connector {
-    position: relative;
-    width: 100px;
-    height: 2px;
-    background-color: #333;
-    transform: rotate(-45deg);
-    margin: 100px auto; /* Для центрирования */
-}
-
-.line {
-    position: absolute;
-    width: 100px;
-    height: 2px;
-    background-color: #333;
-}
-
-.line-1 {
-    top: 50%;
-    left: 0;
-    transform: rotate(180deg);
-}
-
-.line-2 {
-    top: 50%;
-    right: 0;
-    transform: rotate(45deg);
-}
 .engine {
-    top: 20%;
-    left: 10%;
+    top: 15%;
+    left: 15%;
 }
 
-/* .electricity {
-    top: 30%;
-    left: 10%;
-}
-
-.body {
-    top: 20%;
-    right: 20%;
-}
-
-.brakes {
-    bottom: 20%;
-    right: 20%;
+.electrics {
+    top: 45%;
+    left: 5%;
 }
 
 .suspension {
-    bottom: 30%;
-    left: 10%;
+    bottom: 8%;
+    left: 18%;
 }
 
 .transmission {
-    bottom: 10%;
-    left: 20%;
-} */
-
-/* Connector lines */
-.engine .connector {
-    top: -50px;
-    left: 50%;
+    bottom: 6%;
+    left: 48%;
 }
 
-/* .electricity .connector {
-    top: -50px;
-    left: 50%;
+.brakes {
+    bottom: 27%;
+    right: 5%;
 }
 
-.body .connector {
-    top: 50px;
-    right: 50%;
+.bodywork {
+    top: 23%;
+    right: 5%;
 }
 
-.brakes .connector {
-    bottom: 50px;
-    right: 50%;
+.additional_equipment{
+    top: 7%;
+    right: 30%;
 }
-
-.suspension .connector {
-    bottom: -50px;
-    left: 50%;
-}
-
-.transmission .connector {
-    bottom: -50px;
-    left: 50%;
-} */
-
 
 /*Получите персональную подборку запчастей*/
 .spare_parts_selection{
-    background-image: url(../img/UAZ_Spare_Parts_Selection.png);
+    background-image: url(../img/fon/UAZ_Spare_Parts_Selection.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -565,7 +541,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Inter';
     font-size: 25px;
     font-weight: 400;
-    width: 650px;
+    width: 600px;
     padding-top: 50px;
 }
 .spare_parts_right{
@@ -599,7 +575,7 @@ h1,h2,h3,h4,h5,h6{
 
 /*Контакты*/
 .contact_block{
-    background-image: url(../img/Map.png);
+    background-image: url(../img/fon/Map.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -617,7 +593,7 @@ h1,h2,h3,h4,h5,h6{
     font-style: normal;
     line-height: normal;
     background: #014637;
-    max-width: 550px;
+    max-width: 540px;
     padding: 49px 0 97px 73px;
 }
 .contact_title{
@@ -775,8 +751,7 @@ form label {
 }
 
 form input[type="text"],
-form input[type="email"],
-form input[type="date"] {
+form input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -808,6 +783,19 @@ form textarea {
     background-color: #0b3e1c;
 }
 
+.title_model{
+    color: #014637;
+    font-family: 'Bowler';
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.text_model{
+    color: #014637;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
 /* Сообщение об успешной отправке */
 .success-message {
     display: none;

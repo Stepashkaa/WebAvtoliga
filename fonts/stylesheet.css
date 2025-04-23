@@ -1,56 +1,55 @@
 @font-face {
-    font-family: 'Bowler';
-    src: local('BOWLER Regular'), local('BOWLER-Regular'),
-        url('Bowler.ttf') format('ttf');
+    font-family: "Bowler";
+    src: url('Bowler.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Inter';
-    src: url('Inter_24pt-Bold.ttf') format('ttf');
+    src: url('Inter_24pt-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Inter';
-    src: url('Inter_24pt-ExtraBold.ttf') format('ttf');
+    src: url('Inter_24pt-ExtraBold.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Inter';
-    src: url('Inter_24pt-Italic.ttf') format('ttf');
+    src: url('Inter_24pt-Italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Inter';
-    src: url('Inter_24pt-Light.ttf') format('ttf');
+    src: url('Inter_24pt-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Inter';
-    src: url('Inter_24pt-Medium.ttf') format('ttf');
+    src: url('Inter_24pt-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Inter';
-    src: url('Inter_24pt-Regular.ttf') format('ttf');
+    src: url('Inter_24pt-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Inter';
-    src: url('Inter_24pt-SemiBold.ttf') format('ttf');
+    src: url('Inter_24pt-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
