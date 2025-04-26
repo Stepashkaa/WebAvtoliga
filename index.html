@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="button_cooperate">
-                        <button class="custom-button">Сотрудничать</button>
+                        <button class="custom-button open-modal">Сотрудничать</button>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
             
             <div class="original_parts">Оригинальные детали в наличии и под заказ Доставка по всей России</div>
             <div class="button_cooperate">
-                <button class="custom-button more">подробнее</button>
+                <a class="custom-button more" href="#About_Us">подробнее</a>
             </div>
             <div class="cont">
                 <div class="mouse">
@@ -145,7 +145,7 @@
                     <div class="discuss_text">После консультации у Вас будет четкое понимание, какие запчасти подходят для Вашего УАЗ и какая стоимость ремонта или покупки</div>
                     <div class="discuss_text online">Встречу также можно провести <b>в онлайн</b> формате</div>
                     <div class="button_discuss">
-                        <button class="custom-button discuss_button">записаться на встречу</button>
+                        <button class="custom-button discuss_button open-modal">записаться на встречу</button>
                     </div>
                 </div>
                 <div class="gears2">
@@ -263,7 +263,7 @@
                     <div class="spare_parts_text">Чтобы сэкономить ваше время, мы предлагаем услугу профессионального подбора запчастей. Просто отправьте нам Ваши данные, и наш менеджер подготовит индивидуальное предложение с учетом ваших потребностей</div>
                     <div class="spare_parts_text online">Ознакомьтесь с нашими спецпредложениями и актуальными скидками, а также скачайте полный <b>прайс-лист</b> с ценами и ассортиментом</div>
                     <div class="button_spare_parts">
-                        <button class="custom-button spare_parts_button">записаться на встречу</button>
+                        <button class="custom-button spare_parts_button open-modal">записаться на встречу</button>
                     </div>
                 </div>
             </div>
@@ -303,7 +303,7 @@
                 </div>
                 <div class="contact-item">
                     <img src="img/footer/EmailFooter.png" alt="Email">
-                    <div class="contact_info_text">avtoliga73@ya.ru</div>
+                    <div class="contact_info_text">avtoliga73@yandex.ru</div>
                 </div>
                 <div class="contact-item">
                     <img src="img/footer/MapFooter.png" alt="Адрес">
@@ -318,7 +318,7 @@
                     <a href="#"><img src="img/footer/WhatsappFooter.png" alt="WhatsApp"></a>
                 </div>
                 <div class="button_contact">
-                    <button class="custom-button contact_button" id="openModalBtn">связаться</button>
+                    <button class="custom-button contact_button open-modal">связаться</button>
                 </div>
             </div>
         </div>
@@ -330,9 +330,10 @@
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
             <div class="title_model">Обратная связь</div>
-            <form id="contactForm">
-                <div for="name" class="text_model">ФИО:</div>
-                <input type="text" id="name" name="name" placeholder="Введите ФИО" required>
+            <div class="subheading_model">заполните пожалуйста поля ниже и нажмите кнопку "Отправить"</div>
+            <form id="contactForm" class="contactForm">
+                <div for="name" class="text_model">Как к вам обращаться?</div>
+                <input type="text" id="name" name="name" placeholder="Имя" required>
 
                 <div for="surname" class="text_model">Компания:</div>
                 <input type="text" id="surname" name="surname" placeholder="Введите компанию" required>
@@ -349,9 +350,17 @@
     </div>
 
     <!-- Сообщение об успешной отправке -->
-    <div class="success-message" id="successMessage">
-        <p>Ваша анкета отправлена!</p>
-        <span class="close" id="closeSuccess">&times;</span>
+    <div class="notification success" style="display: none;">
+        <div class="title_notification">Записаться на бесплатную консултацию</div>
+        <span class="close-notification">&times;</span>
+        <div class="text_notification">Спасибо! Данные успешно отправлены.</div>
+    </div>
+    <!-- Сообщение об ошибки отправки -->
+    <div class="notification error" style="display: none;">
+        <div class="title_notification">Записаться на бесплатную консултацию</div>
+        <span class="close-notification">&times;</span>
+        <div class="text_notification">Ошибка при отправке анкеты. Пожалуйста, попробуйте еще раз.</div>
+        <p></p>
     </div>
 
     <script src="js/scripts.js"></script>
