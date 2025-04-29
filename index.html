@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>АВТОЛИГА</title>
-    <script src="js/SmoothScrolling.js"></script>
+    <link rel="icon" href="img/LogoSite2.png" type="image/x-icon">
+    
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/LogoSite2.png" type="image/x-icon">
+
+    <script src="js/burger.js"></script>
+    <script src="js/telegram.js"></script>
+    <script src="js/SmoothScrolling.js"></script>
 </head>
 <body>
     <div class="menu">
@@ -32,6 +36,11 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Бургер-меню -->
+                <div class="burger-menu">
+                    <img src="img/header/menu.png" alt="Меню" class="burger-icon">
+                </div>
                 
                 <div class="header header-right">
                     <div class="kontakt_header">
@@ -49,6 +58,30 @@
                     </div>
                     <div class="button_cooperate">
                         <button class="custom-button open-modal">Сотрудничать</button>
+                    </div>
+                </div>
+                <!-- Открывающаяся панель -->
+                <div class="overlay" id="overlay">
+                    <div class="sidebar">
+                        <span class="close-btn">&times;</span>
+                        <ul class="sidebar-menu">
+                            <li><a href="#About_Us">О нас</a></li>
+                            <li><a href="#Catalog">Каталог</a></li>
+                            <li><a href="#Cantacts">Контакты</a></li>
+                        </ul>
+                        <div class="kontakt_header">
+                            <div class="contact-info-container">
+                                <div class="phone_header">
+                                    +7 (937) 885-88-15
+                                </div>
+                                <div class="email_header">
+                                    avtoliga73@yandex.ru
+                                </div>
+                            </div>
+                            <div class="button_cooperate">
+                                <button class="custom-button open-modal">Сотрудничать</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -363,6 +396,5 @@
         <p></p>
     </div>
 
-    <script src="js/scripts.js"></script>
 </body>
 </html>

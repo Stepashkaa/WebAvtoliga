@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Кнопки, которые должны открывать форму
     const openModalButtons = document.querySelectorAll(".open-modal");
+    const closeModalButton = document.getElementById("closeModal");
 
     // Функция для отправки данных в Telegram
     function sendDataToTelegram(formData) {
@@ -68,6 +69,26 @@ document.addEventListener("DOMContentLoaded", function () {
         return true; // Форма валидна
     }
 
+    // Функция для открытия модального окна
+    function openModal() {
+        modal.style.display = "block"; // Показываем модальное окно
+        setTimeout(() => {
+            modal.querySelector(".modal-content").classList.add("slide-in"); // Добавляем класс для анимации появления
+        }, 10); // Небольшая задержка для корректного старта анимации
+    }
+
+    // Функция для закрытия модального окна
+    function closeModal() {
+        const modalContent = modal.querySelector(".modal-content");
+        modalContent.classList.remove("slide-in"); // Убираем класс для анимации появления
+        modalContent.classList.add("slide-out"); // Добавляем класс для анимации исчезновения
+
+        setTimeout(() => {
+            modal.style.display = "none"; // Скрываем модальное окно после завершения анимации
+            modalContent.classList.remove("slide-out"); // Очищаем класс анимации исчезновения
+        }, 300); // Время анимации (должно совпадать с animation-duration в CSS)
+    }
+
     // Обработчик события отправки формы
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // Отменяем стандартное поведение формы
@@ -119,16 +140,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // Добавление обработчиков для всех кнопок, открывающих форму
     openModalButtons.forEach(button => {
         button.onclick = function () {
-            modal.style.display = "block";
+            openModal(); // Используем функцию openModal
         };
     });
-    closeModal.onclick = function () {
-        modal.style.display = "none";
+
+    // Закрытие модального окна при клике на крестик
+    closeModalButton.onclick = function () {
+        closeModal(); // Используем функцию closeModal
     };
+
     // Закрытие модального окна при клике вне окна
     window.onclick = function (event) {
         if (event.target === modal) {
-            modal.style.display = "none";
+            closeModal(); // Используем функцию closeModal
         }
     };
 });

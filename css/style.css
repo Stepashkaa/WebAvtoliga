@@ -105,6 +105,147 @@ h1,h2,h3,h4,h5,h6{
     border-color: #014637; 
 }
 
+
+/* Стили для бургера в адаптивной версии */
+.burger-menu {
+    display: none; 
+}
+
+.burger-icon {
+    cursor: pointer;
+}
+
+/* Стили для открываемой панели */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    overflow-y: auto;
+    /* background-attachment: fixed; */
+}
+
+.sidebar {
+    position: fixed;
+    
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color:#FFF ;
+    padding: 60px 30px 30px 30px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    transition: transform 0.3s ease-in-out; /* Плавная анимация */
+    transform: translateX(100%); /* Начальное положение */
+}
+
+/* При добавлении класса active к overlay */
+.overlay.active .sidebar {
+    transform: translateX(0); /* Меню выдвигается */
+}
+
+
+
+.close-btn {
+    position: absolute; 
+    top: 10px;
+    right: 10px; 
+    color: #aaa;
+    font-size: 24px; 
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.close-btn:hover{
+    color: #000000;
+}
+
+.sidebar-menu {
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #014637;
+    font-size: 22px;
+    font-weight: 700;
+}
+.overlay .kontakt_header{
+    margin: 0;
+}
+.overlay .kontakt_header .contact-info-container .phone_header,
+.overlay .kontakt_header .contact-info-container .email_header {
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: left; 
+}
+
+.overlay .kontakt_header .button_cooperate {
+    margin-top: 30px; 
+}
+
+
+
+@media (max-width: 1500px) {
+    .menu__inner {
+        padding: 0 20px;
+    }
+    .header-left{
+        gap: 90px;
+    }
+    .header-right{
+        gap: 30px;
+    }
+    .page{
+        gap: 50px;
+    }
+    .kontakt_header {
+        margin-left: 40px;
+    }
+    .phone_header{
+        font-size: 18px;
+    }
+}
+/* Адаптивные стили (меньше 1200px) */
+@media (max-width: 1200px) {
+    .pages,
+    .header-right {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block; 
+    }
+
+    .logo {
+        margin: 0 20px; 
+    }
+
+    .overlay {
+        display: none; 
+    }
+
+    .overlay.active {
+        display: block; 
+    }
+
+}
+
 /*Надёжный поставщик*/
 .reliable_supplier{
     background-image: url(../img/fon/UAZ_fon_1.png);
@@ -729,16 +870,30 @@ h1,h2,h3,h4,h5,h6{
     margin: auto; 
     top: 50%; 
     left: 50%; 
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -30%) scale(0.9);
+    opacity: 0;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
-    animation-name: fadeIn;
-    animation-duration: 0.4s;
+    /* animation-duration: 0.4s;
+    animation-timing-function: ease-out; */
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Плавный переход */
+}
+
+/* Анимация появления */
+.modal-content.slide-in {
+    opacity: 1; /* Полная видимость */
+    transform: translate(-50%, -50%) scale(1); /* Нормальный масштаб */
+}
+
+/* Анимация исчезновения */
+.modal-content.slide-out {
+    opacity: 0; /* Полная прозрачность */
+    transform: translate(-50%, -30%) scale(0.9); /* Возвращение к начальному масштабу */
 }
 
 .close {
