@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetElement = document.getElementById(targetId); // Находим целевой элемент
 
             if (targetElement) {
+                document.body.classList.remove("menu-open");
                 // Плавная прокрутка к целевому элементу
                 targetElement.scrollIntoView({ behavior: "smooth" });
+                closeMenu(); // Закрываем меню после клика
             }
-
-            closeMenu(); // Закрываем меню после клика
         });
     });
 

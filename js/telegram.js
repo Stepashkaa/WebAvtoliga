@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Функция для открытия модального окна
     function openModal() {
         modal.style.display = "block"; // Показываем модальное окно
+        document.body.classList.add("modal-open");// Блокируем прокрутку страницы
         setTimeout(() => {
             modal.querySelector(".modal-content").classList.add("slide-in"); // Добавляем класс для анимации появления
         }, 10); // Небольшая задержка для корректного старта анимации
@@ -86,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             modal.style.display = "none"; // Скрываем модальное окно после завершения анимации
             modalContent.classList.remove("slide-out"); // Очищаем класс анимации исчезновения
+            document.body.classList.remove("modal-open"); // Разблокируем прокрутку страницы
         }, 300); // Время анимации (должно совпадать с animation-duration в CSS)
     }
 
