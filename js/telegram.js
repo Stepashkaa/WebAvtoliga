@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const openModalButtons = document.querySelectorAll(".open-modal");
     const closeModalButton = document.getElementById("closeModal");
 
+    // Переменная для хранения позиции прокрутки
+    let scrollPosition = 0;
+
     // Функция для отправки данных в Telegram
     function sendDataToTelegram(formData) {
         const botToken = '7016228596:AAFEVtiH2Jl8za7cUWA9WDc5XXxkV0zkMqg'; // Токен вашего бота
@@ -71,8 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Функция для открытия модального окна
     function openModal() {
-        modal.style.display = "block"; // Показываем модальное окно
-        document.body.classList.add("modal-open");// Блокируем прокрутку страницы
+        // Сохраняем текущую позицию прокрутки
+        scrollPosition = window.scrollY;
+        // Блокируем прокрутку страницы
+        document.body.classList.add("modal-open");
+
+        // Применяем сохраненную позицию прокрутки к body
+        document.body.style.top = `-${scrollPosition}px`;
+
+        // Показываем модальное окно
+        modal.style.display = "block";
         setTimeout(() => {
             modal.querySelector(".modal-content").classList.add("slide-in"); // Добавляем класс для анимации появления
         }, 10); // Небольшая задержка для корректного старта анимации
@@ -85,10 +96,24 @@ document.addEventListener("DOMContentLoaded", function () {
         modalContent.classList.add("slide-out"); // Добавляем класс для анимации исчезновения
 
         setTimeout(() => {
-            modal.style.display = "none"; // Скрываем модальное окно после завершения анимации
-            modalContent.classList.remove("slide-out"); // Очищаем класс анимации исчезновения
-            document.body.classList.remove("modal-open"); // Разблокируем прокрутку страницы
-        }, 300); // Время анимации (должно совпадать с animation-duration в CSS)
+            // Скрываем модальное окно
+            modal.style.display = "none";
+
+            // Убираем анимацию исчезновения
+            modalContent.classList.remove("slide-out");
+
+            // Разблокируем прокрутку страницы
+            document.body.classList.remove("modal-open");
+
+            // Временно отключаем плавную прокрутку
+            document.documentElement.style.scrollBehavior = "auto";
+
+            // Восстанавливаем позицию прокрутки
+            document.body.style.top = "";
+            window.scrollTo(0, scrollPosition);
+            // Возвращаем плавную прокрутку (если она была включена)
+            document.documentElement.style.scrollBehavior = "";
+        }, 300); // Время анимации должно совпадать с CSS
     }
 
     // Обработчик события отправки формы
