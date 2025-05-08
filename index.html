@@ -12,6 +12,7 @@
     <script src="js/burger.js"></script>
     <script src="js/telegram.js"></script>
     <script src="js/SmoothScrolling.js"></script>
+
 </head>
 <body>
     <div class="menu">
@@ -185,16 +186,18 @@
                         <button class="custom-button discuss_button open-modal">записаться на встречу</button>
                     </div>
                 </div>
-                <div class="gears2">
+                <!-- <div class="gears2">
                     <img src="img/discuss_your_questions/gears2.png" alt="">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
     <div class="delivery_methods">
         <div class="container">
-            <div class="title_header">Способы</div>
-            <div class="title_header title_header2">доставки</div>
+            <div class="title_header_wrapper">
+                <div class="title_header">Способы</div>
+                <div class="title_header title_header2">доставки</div>
+            </div>
             <div class="methods">
                 <div class="method">
                     <img src="img/delivery_methods/car1.png" alt="Транспортная компания" class="method-icon" />
@@ -319,6 +322,10 @@
                     <div class="contact_text adress">г. Ульяновск, ул. Московское шоссе, 72А</div>
                 </div>
             </div>
+            <div class="map_container">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e64f802c97242efec89c3a48a1851e524480090e1b160174377a07a1db206d3&amp ;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=false">
+                </script>
+            </div>
         </div>
     </div>
     <div class="footer">
@@ -378,6 +385,9 @@
                 <div for="email" class="text_model">Email:</div>
                 <input type="email" id="email" name="email" placeholder="Введите email" required>
 
+                <div for="phone" class="text_model">Телефон:</div>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX" required>
+
                 <div for="order" class="text_model">Заказ:</div>
                 <input type="text" id="order" name="order" placeholder="Опишите ваш заказ"></input>
 
@@ -399,6 +409,8 @@
         <div class="text_notification">Ошибка при отправке анкеты. Пожалуйста, попробуйте еще раз.</div>
         <p></p>
     </div>
+
+    
 
 </body>
 </html>

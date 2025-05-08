@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <b>Имя:</b> ${formData.name}
             <b>Компания:</b> ${formData.surname}
             <b>E-mail:</b> ${formData.email}
+            <b>Телефон:</b> ${formData.phone}
             <b>Заказ:</b> ${formData.order || 'Не указано'}
         `;
 
@@ -56,8 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const name = document.getElementById('name').value.trim();
         const surname = document.getElementById('surname').value.trim();
         const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
 
-        if (!name || !surname || !email) {
+        if (!name || !surname || !email || !phone) {
             console.log('Validation failed: Required fields are missing');
             alert("Пожалуйста, заполните все обязательные поля.");
             return false; // Форма невалидна
@@ -67,6 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!emailPattern.test(email)) {
             console.log('Validation failed: Invalid email');
             alert("Пожалуйста, введите корректный email.");
+            return false; // Форма невалидна
+        }
+
+        // Проверка формата телефона (пример: +7 (XXX) XXX-XX-XX)
+        const phonePattern = /^\+7\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}$/;
+        if (!phonePattern.test(phone)) {
+            console.log('Validation failed: Invalid phone number');
+            alert("Пожалуйста, введите корректный номер телефона в формате +7 (XXX) XXX-XX-XX.");
             return false; // Форма невалидна
         }
         return true; // Форма валидна
@@ -124,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 name: document.getElementById('name').value.trim(),
                 surname: document.getElementById('surname').value.trim(),
                 email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
                 order: document.getElementById('order').value.trim() || 'Не указано'
             };
 
