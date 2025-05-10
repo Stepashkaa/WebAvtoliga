@@ -8,6 +8,8 @@
     
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/form.css">
 
     <script src="js/burger.js"></script>
     <script src="js/telegram.js"></script>
@@ -232,8 +234,10 @@
     </div>
     <div class="our_spares" id="Catalog">
         <div class="container">
-            <div class="title_header">Наши</div>
-            <div class="title_header title_header2">запчасти</div>
+            <div class="title_header_wrapper">
+                <div class="title_header">Наши</div>
+                <div class="title_header title_header2">запчасти</div>
+            </div>
             <div class="uazik">
                 <img src="img/our_spares/uazikHunter.png" alt="Автомобиль УАЗ" class="car-image">
                 
@@ -378,9 +382,6 @@
             <form id="contactForm" class="contactForm">
                 <div for="name" class="text_model">Как к вам обращаться?</div>
                 <input type="text" id="name" name="name" placeholder="Имя" required>
-
-                <div for="surname" class="text_model">Компания:</div>
-                <input type="text" id="surname" name="surname" placeholder="Введите компанию" required>
 
                 <div for="email" class="text_model">Email:</div>
                 <input type="email" id="email" name="email" placeholder="Введите email" required>
