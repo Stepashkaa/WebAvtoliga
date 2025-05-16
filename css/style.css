@@ -782,7 +782,6 @@ body.menu-open {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 400;
-    text-transform: lowercase;
 }
 .socials {
     display: flex;

